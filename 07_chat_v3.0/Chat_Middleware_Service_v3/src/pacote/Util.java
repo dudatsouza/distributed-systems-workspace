@@ -13,6 +13,12 @@ public class Util {
     public static final String MSG_MANUTENCAO = "#MANUTENCAO#";
     public static volatile boolean emManutencao = false;
 
+    // Serviços implementados: false = aparece cinza no Painel de Controle e o botão não funciona
+    public static final boolean SERVICO_DESKTOP_HABILITADO = true;
+    public static final boolean SERVICO_WEB_HABILITADO = false;
+    public static final boolean SERVICO_TERCEIROS_HABILITADO = false;
+    public static final boolean SERVICO_PUBLICIDADE_HABILITADO = false;
+
     // Garante que a pasta e o arquivo do repositório existem antes das threads usarem
     public static void criarRepositorio() throws IOException {
         File arquivo = new File(PathRepDesktop);

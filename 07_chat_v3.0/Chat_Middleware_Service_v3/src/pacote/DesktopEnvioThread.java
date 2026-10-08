@@ -50,11 +50,12 @@ public class DesktopEnvioThread implements Runnable {
         int bytes = 0;
         for (int i = linhas.size() - 1; i >= 0; i--) {
             String linha = linhas.get(i);
-            bytes += linha.getBytes(StandardCharsets.UTF_8).length;
+            bytes += linha.getBytes(StandardCharsets.UTF_8).length + 1;
             if (bytes > LIMITE_BYTES) {
                 break;
             }
-            msgs.insert(0, linha);
+            // "\n" separa as mensagens (em HTML é invisível, então clientes antigos não percebem)
+            msgs.insert(0, linha + "\n");
         }
         return msgs.toString();
     }

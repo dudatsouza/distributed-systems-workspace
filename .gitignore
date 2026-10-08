@@ -26,3 +26,7 @@ bin/
 
 ### macOS ###
 .DS_Store
+
+
+### Entregas ###
+entregas/

@@ -39,6 +39,12 @@ public class MenuServidor {
             mnuItWeb = new CheckboxMenuItem("Servidor Web");
             mnuItTerceiros = new CheckboxMenuItem("Servidor Terceiros");
             mnuItPublicidade = new CheckboxMenuItem("Servidor Publicidade");
+
+            // Serviços ainda não implementados ficam desabilitados (ver Util)
+            mnuItDesktop.setEnabled(Util.SERVICO_DESKTOP_HABILITADO);
+            mnuItWeb.setEnabled(Util.SERVICO_WEB_HABILITADO);
+            mnuItTerceiros.setEnabled(Util.SERVICO_TERCEIROS_HABILITADO);
+            mnuItPublicidade.setEnabled(Util.SERVICO_PUBLICIDADE_HABILITADO);
             mnuSair = new MenuItem("Sair");
             mnuSair.addActionListener(ae -> {
                 if (Util.desktopRecepcaoThread != null) {

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 // Tabela de emojis do chat.
 // O popup insere o CÓDIGO no campo de mensagem (ex.: ":-)") e, ao enviar,
-// substituir() troca cada código pelo HTML: entidade Unicode (&#128513;) ou <img src=...>
+// substituir() troca cada código pelo HTML: entidade Unicode (&#128513;) ou <img src=...> (GIF animado)
 public class Emojis {
 
     // Guia 1 - Carinhas: código -> code point Unicode
@@ -20,11 +20,15 @@ public class Emojis {
         {":ok:", 0x1F44C}, {":palmas:", 0x1F44F}, {":fogo:", 0x1F525}, {":festa:", 0x1F389}, {":cafe:", 0x2615},
     };
 
-    // Guia 2 - Figuras: código -> arquivo em src/images
-    public static final String[][] FIGURAS = {
-        {":coracao:", "Coracao.png"}, {":dinheiro:", "Dinheiro.png"}, {":lanterna:", "icons8-lanterna-verde-16.png"},
-        {":flash:", "icons8-the-flash-sign-16.png"}, {":batman:", "icons8-batman-antigo-16.png"},
+    // Guia 2 - GIFs animados: código -> arquivo em src/images/gifs (64x64)
+    // Fonte: Noto Emoji Animation (Google), licença CC BY 4.0 - https://googlefonts.github.io/noto-emoji-animation/
+    public static final String[][] GIFS = {
+        {":gif_risada:", "risada.gif"}, {":gif_rolando:", "rolando.gif"}, {":gif_apaixonado:", "apaixonado.gif"},
+        {":gif_chorando:", "chorando.gif"}, {":gif_pensando:", "pensando.gif"}, {":gif_comemorando:", "comemorando.gif"},
+        {":gif_coracao:", "coracao.gif"}, {":gif_fogo:", "fogo.gif"}, {":gif_festa:", "festa.gif"},
+        {":gif_palmas:", "palmas.gif"}, {":gif_tchau:", "tchau.gif"}, {":gif_cem:", "cem.gif"},
     };
+    public static final int TAMANHO_GIF = 64;
 
     private static final Map<String, String> HTML_POR_CODIGO = new LinkedHashMap<>();
     private static final Pattern PADRAO;
@@ -33,8 +37,9 @@ public class Emojis {
         for (Object[] c : CARINHAS) {
             HTML_POR_CODIGO.put(((String) c[0]).toLowerCase(), "&#" + c[1] + ";");
         }
-        for (String[] f : FIGURAS) {
-            HTML_POR_CODIGO.put(f[0].toLowerCase(), "<img src='" + f[1] + "' width='20' height='20'>");
+        for (String[] f : GIFS) {
+            HTML_POR_CODIGO.put(f[0].toLowerCase(),
+                    "<img src='gifs/" + f[1] + "' width='" + TAMANHO_GIF + "' height='" + TAMANHO_GIF + "' align='middle'>");
         }
         // O texto chega já escapado (< vira &lt;), então os códigos também são procurados escapados.
         // Códigos maiores primeiro e uma única passada, para um emoji não "quebrar" o outro.

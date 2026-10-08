@@ -2,7 +2,6 @@ package pacote;
 
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.Insets;
 import java.util.function.Consumer;
 import javax.swing.BorderFactory;
@@ -13,12 +12,12 @@ import javax.swing.JPopupMenu;
 import javax.swing.JTabbedPane;
 
 // Popup menu de emojis (desenho do quadro):
-// JPopupMenu -> JTabbedPane (Guia 1 = Carinhas, Guia 2 = Figuras) -> JPanel com GridLayout de botões
+// JPopupMenu -> JTabbedPane (Guia 1 = Carinhas, Guia 2 = GIFs) -> JPanel com GridLayout de botões
 public class PopupEmojis extends JPopupMenu {
 
     private final Consumer<String> aoEscolher;
 
-    // aoEscolher recebe o código do emoji clicado (ex.: ":-)" ou ":coracao:")
+    // aoEscolher recebe o código do emoji clicado (ex.: ":-)" ou ":gif_fogo:")
     public PopupEmojis(Consumer<String> aoEscolher) {
         this.aoEscolher = aoEscolher;
 
@@ -34,15 +33,15 @@ public class PopupEmojis extends JPopupMenu {
         }
         guias.addTab("Carinhas", pnlCarinhas);
 
-        JPanel pnlFiguras = new JPanel(new GridLayout(0, 3, 4, 4));
-        pnlFiguras.setBorder(BorderFactory.createEmptyBorder(6, 6, 6, 6));
-        for (String[] f : Emojis.FIGURAS) {
-            JButton btn = criarBotao(f[0]);
-            Image img = new ImageIcon(PopupEmojis.class.getResource("/images/" + f[1])).getImage();
-            btn.setIcon(new ImageIcon(img.getScaledInstance(28, 28, Image.SCALE_SMOOTH)));
-            pnlFiguras.add(btn);
+        // GIFs animados: o ImageIcon de um .gif já anima sozinho dentro do botão
+        JPanel pnlGifs = new JPanel(new GridLayout(0, 4, 4, 4));
+        pnlGifs.setBorder(BorderFactory.createEmptyBorder(6, 6, 6, 6));
+        for (String[] g : Emojis.GIFS) {
+            JButton btn = criarBotao(g[0]);
+            btn.setIcon(new ImageIcon(PopupEmojis.class.getResource("/images/gifs/" + g[1])));
+            pnlGifs.add(btn);
         }
-        guias.addTab("Figuras", pnlFiguras);
+        guias.addTab("GIFs", pnlGifs);
 
         add(guias);
     }
