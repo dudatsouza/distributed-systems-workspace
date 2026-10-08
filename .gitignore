@@ -1,0 +1,28 @@
+### Compilação do IntelliJ ###
+out/
+*.class
+
+### IntelliJ: arquivos pessoais (os de configuração do projeto sobem) ###
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml
+.idea/queries/
+.idea/usage.statistics.xml
+.idea/tasks.xml
+.kotlin
+
+### NetBeans / Eclipse / VS Code ###
+nbproject/private/
+nbbuild/
+dist/
+target/
+.classpath
+.project
+.settings/
+bin/
+.vscode/
+
+### macOS ###
+.DS_Store

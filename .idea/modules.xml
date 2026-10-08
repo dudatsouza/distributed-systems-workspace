@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/distributed-systems-workspace.iml" filepath="$PROJECT_DIR$/.idea/distributed-systems-workspace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_sockets_tcp/Sockets01_Client/Sockets01_Client.iml" filepath="$PROJECT_DIR$/01_sockets_tcp/Sockets01_Client/Sockets01_Client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_sockets_tcp/Sockets01_Server/Sockets01_Server.iml" filepath="$PROJECT_DIR$/01_sockets_tcp/Sockets01_Server/Sockets01_Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_sockets_udp/Sockets02_UDP/Sockets02_UDP.iml" filepath="$PROJECT_DIR$/02_sockets_udp/Sockets02_UDP/Sockets02_UDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_urna_eletronica/Atividade_Urna/Atividade_Urna.iml" filepath="$PROJECT_DIR$/03_urna_eletronica/Atividade_Urna/Atividade_Urna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_threads/Threads/Threads.iml" filepath="$PROJECT_DIR$/04_threads/Threads/Threads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_chat_v1.0/ChatClienteDesktop/ChatClienteDesktop.iml" filepath="$PROJECT_DIR$/05_chat_v1.0/ChatClienteDesktop/ChatClienteDesktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_chat_v1.0/Chat_Client_Desktop/Chat_Client_Desktop.iml" filepath="$PROJECT_DIR$/05_chat_v1.0/Chat_Client_Desktop/Chat_Client_Desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_chat_v2.0/Chat_Cliente_Desktop_v2/Chat_Cliente_Desktop_v2.iml" filepath="$PROJECT_DIR$/06_chat_v2.0/Chat_Cliente_Desktop_v2/Chat_Cliente_Desktop_v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_chat_v2.0/Chat_Middleware_Service_v2/Chat_Middleware_Service_v2.iml" filepath="$PROJECT_DIR$/06_chat_v2.0/Chat_Middleware_Service_v2/Chat_Middleware_Service_v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_chat_v3.0/Chat_Cliente_Desktop_v3/Chat_Cliente_Desktop_v3.iml" filepath="$PROJECT_DIR$/07_chat_v3.0/Chat_Cliente_Desktop_v3/Chat_Cliente_Desktop_v3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_chat_v3.0/Chat_Middleware_Service_v3/Chat_Middleware_Service_v3.iml" filepath="$PROJECT_DIR$/07_chat_v3.0/Chat_Middleware_Service_v3/Chat_Middleware_Service_v3.iml" />
+    </modules>
+  </component>
+</project>
